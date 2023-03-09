@@ -9,7 +9,7 @@ using UnityEngine;
 
 public static class CombatSystem
 {
-
+    // Le Déroulement de la Bataille / _combat = pour le UI, _fictif = pour le AI
     public static void CalculCombat(bool _combat, bool _fictif, BaseUnit _attaquant, BaseUnit _defendant)
     {
         double _degat = 0, _degatRecu = 0, remainingHpAtk = _attaquant.getCurrentHP();
@@ -87,13 +87,14 @@ public static class CombatSystem
         MenuManager.Instance.ShowCombatUI(_degat, _degatRecu, _remainingHpDef, remainingHpAtk);
     }
 
+    // Calcule le Degat d'un Attaquand à un Défandant (Atk * CritChance + 2) - Def(Defandant) 
     public static double FormuleDeCombat(BaseUnit _attaquant, BaseUnit _defendant)
     {
         double _degat;
         _degat = (_attaquant.getAtk() * _attaquant.getCritChance() + 2) - _defendant.getDef();
         return _degat;
     }
-
+    // Vérifie si la position est dans le range du Unit
     public static bool unitInRange(List<Vector2> _attackrange, Vector2 _enemyPos)
     {
         bool _inRange = false;

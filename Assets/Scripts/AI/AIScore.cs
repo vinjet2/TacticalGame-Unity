@@ -1,7 +1,7 @@
 //***************************************//
-// [Nom du Fichier] AI Score
-// [Utilisation] Les Dictionnaires qui garde le Score en Memoire Pour le AI
-// Fait Par: Vincent
+// Base de Donnee du Score pour le AI
+// Les Dictionnaires qui garde le Score en Memoire
+// VincentComtois
 //***************************************//
 using System.Collections;
 using System.Collections.Generic;

@@ -1,6 +1,6 @@
 //***************************************//
-// [Nom du Fichier] Pathfinder
-// [Utilisation] Fonction Important pour que le AI trouve son chemin
+// Pathfinder - Trouver le prochain et le meilleure Chemin 
+// Fonction Important pour que le AI trouve son chemin
 // Fait Par: Vincent
 //***************************************//
 using System.Collections;
@@ -32,7 +32,6 @@ public static class Pathfinder {
                 }
             }
         }
-
     }
     // Trouver le prochain Move
     public static void trouverNextMove(BaseUnit AI, BaseUnit cible, List<Vector2> _deplacement, List<Vector2> _attackRange) {

@@ -1,6 +1,6 @@
 //***************************************//
-// [Nom du Fichier] Game Manager
-// [Utilisation] Verification des Stats du Jeu & le Retour au menu
+// Game Manager
+// Verification des Stats du Jeu & le Retour au menu (State method)
 // Fait Par: Vincent
 //***************************************//
 using System;
@@ -18,30 +18,28 @@ public class GameManager : MonoBehaviour {
         Instance = this;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         ChangeState(GameState.GenerateGrid);
     }
 
-    // Battle Systeme
+    // Les États du jeu
     public void ChangeState(GameState newState){
         GameState = newState;
         switch (newState) {
-            case GameState.GenerateGrid:
+            case GameState.GenerateGrid: // Creer la map
                 GridManager.Instance.GenerateGrid();
                 break;
-            case GameState.SpawnHeroes:
+            case GameState.SpawnHeroes: // Creer les Unit
                 UnitManager.Instance.SpawnHeroes();
                 break;
-            case GameState.SpawnEnemies:
+            case GameState.SpawnEnemies: // Creer les Ennemis
                 UnitManager.Instance.SpawnEnemies();
                 break;
-            case GameState.PlayerTurn:
+            case GameState.PlayerTurn: // Tour du Joeur
                 UnitManager.Instance.ActiveActions("hero");// Rendre tous les Units leur Action Possible 
                 MenuManager.Instance.ShowTurn("player");
                 break;
-            case GameState.EnemiesTurn:
+            case GameState.EnemiesTurn: // Tour de l'ennemi
                 UnitManager.Instance.ActiveActions("enemy");
                 MenuManager.Instance.ShowTurn("enemy");
                 UnitManager.Instance.EnemiesTurn();
@@ -54,8 +52,6 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene("MainMenu");
     }
 }
-
-
 
 public enum GameState {
     GenerateGrid = 0,
