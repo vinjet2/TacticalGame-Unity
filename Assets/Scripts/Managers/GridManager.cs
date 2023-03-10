@@ -1,6 +1,6 @@
 //***************************************//
-// [Nom du Fichier] Grid Manager
-// [Utilisation] La création de la grid et Le lien Entre les UI et leur Object (Deplacement & AttackRange)
+// Grid Manager
+// La création de la map et le lien Entre les UI et leur Object (Deplacement & AttackRange)
 // Fait Par: Vincent
 //***************************************//
 using System;
@@ -62,7 +62,7 @@ public class GridManager : MonoBehaviour {
        return null;
     }
 
-    // Active les Mouvement dans le Dictionnaire _tiles
+    // Active le UI de deplacement
     public void ShowMovement(List<Vector2> _deplacement) {
         if (_deplacement == null){
             //print("Refresh UI Deplacement");
@@ -81,7 +81,7 @@ public class GridManager : MonoBehaviour {
         }
     }
 
-    // Active les AttackRange dans le Dictionnaire _tiles
+    // Active le UI d' Attaque Range
     public void ShowAttackRange(List<Vector2> _attackRange) {
         if (_attackRange == null) {
             //print("Refresh UI AttackRange");

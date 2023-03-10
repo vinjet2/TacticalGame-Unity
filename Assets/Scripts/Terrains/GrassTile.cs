@@ -1,7 +1,7 @@
 //***************************************//
-// [Nom du Fichier] GrassTile
-// [Utilisation] Walkable Tile
-// Fait Par: Vincent & Mathieu
+// GrassTile
+// Walkable Tile
+// Fait Par: Vincent
 //***************************************//
 using System.Collections;
 using System.Collections.Generic;
@@ -19,12 +19,6 @@ public class GrassTile : Tile
     }
     // Start is called before the first frame update
     void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
     {
         
     }

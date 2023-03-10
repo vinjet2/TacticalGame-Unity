@@ -1,7 +1,7 @@
 //***************************************//
-// [Nom du Fichier] Unit Manager
-// [Utilisation] La creation, les actions et la destructions des units (Hero & Enemy)
-// Baser sur le choie de l'usager dans le ChangeHeroTeam.
+// Unit Manager
+// La creation, les actions et la destructions des units (Hero & Enemy)
+// Baser sur le choix de l'usager dans le ChangeHeroTeam.
 // Fait Par: Vincent & Mathieu
 //***************************************//
 using System.Collections;
@@ -192,7 +192,6 @@ public class UnitManager : MonoBehaviour {
         }
     }
    
-
     // Setting pour le Selected Hero
     public void SetSelectedHero(BaseUnit hero) { // SelectedHero
         SelectedHero = hero;
@@ -201,6 +200,7 @@ public class UnitManager : MonoBehaviour {
         MenuManager.Instance.ShowSelectedHero(hero);
         MenuManager.Instance.ShowActionUi(hero);
     }
+
     // Setting pour le Selected Enemy
     public void SetSelectedOpponent(BaseUnit enemy) {
         MenuManager.Instance.ShowSelectedOpponent(enemy);
@@ -219,7 +219,6 @@ public class UnitManager : MonoBehaviour {
                 enemy.setMoveAble(true);
                 enemy.setAtkAble(true);
             }
-        }
-        
+        } 
     }
 }

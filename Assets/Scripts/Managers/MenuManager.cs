@@ -1,6 +1,6 @@
 //***************************************//
-// [Nom du Fichier] Menu Manager
-// [Utilisation] L'activation des UI pour le joueur
+// Menu Manager
+// L'activation des UI pour le joueur
 // Fait Par: Vincent
 //***************************************//
 using System.Collections;
@@ -13,17 +13,20 @@ public class MenuManager : MonoBehaviour
 {
     public static MenuManager Instance;
 
+    // Reference GameObject
     [SerializeField] private GameObject _selectedHeroObject, _selectedOpponentObject, _tileObject, _tileUnitObject;
-    [SerializeField] private GameObject _playerTurn, _enemyTurn;
-
+    // UI Stats
     [SerializeField] private GameObject _selectedDamage, _selectedCurrentHp, _selectedComingHp;
     [SerializeField] private GameObject _opponentDamage, _opponentCurrentHp, _opponentComingHp;
+    // UI Combat
+    [SerializeField] private GameObject _playerTurn, _enemyTurn;
     [SerializeField] private GameObject _combatUI, _moveUndoButton, _attackButton;
-
-    [SerializeField] private GameObject _FinDePartie, _RetourMenu;
-    private bool _cUIActif, Atk_Move = false;
     private bool Move_Undo = true;
+    // UI Menu
+    [SerializeField] private GameObject _FinDePartie, _RetourMenu;
 
+    private bool _cUIActif, Atk_Move = false;
+    // Pause Menu
     private float _time = 0.0f;
     public float _interPeriod = 0.1f;
 

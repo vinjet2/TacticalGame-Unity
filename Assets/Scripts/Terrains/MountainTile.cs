@@ -1,7 +1,7 @@
 //***************************************//
-// [Nom du Fichier] MoutainTile
-// [Utilisation] UnWalkable Tile
-// Fait Par: Vincent & Mathieu
+// MoutainTile
+// UnWalkable Tile
+// Fait Par: Vincent
 //***************************************//
 using System.Collections;
 using System.Collections.Generic;

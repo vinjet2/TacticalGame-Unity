@@ -1,6 +1,6 @@
 //***************************************//
-// [Nom du Fichier] Tile (Template Method)
-// [Utilisation] La vérification des Mouvement du joueur,l'activation des UI d'attaqueRange & Déplacement 
+// Tile (Template Method)
+// La vérification des Mouvement du joueur,l'activation des UI d'attaqueRange & Déplacement 
 // La classe parent de toute les Tuiles & l'utilisation de OccupiedUnit comme variable Importante au jeu.
 // Fait Par: Vincent
 //***************************************//
